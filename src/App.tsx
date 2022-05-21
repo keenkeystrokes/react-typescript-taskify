@@ -8,7 +8,7 @@ const App: React.FC = () => {
   /*
      Returns a stateful value, and a function to update it.
      Input is the initial state
-     */
+  */
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
 
