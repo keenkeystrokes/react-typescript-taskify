@@ -9,6 +9,7 @@ const App: React.FC = () => {
      Returns a stateful value, and a function to update it.
      Input is the initial state
   */
+  console.log("App component: App component invoked");
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
 
@@ -20,13 +21,15 @@ const App: React.FC = () => {
   };
 
   console.log(todos);
-  return (
+  const appComponentReturnVal = (
     <div className="App">
       <span className="heading">Taskify</span>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       <TodoList todos={todos} setTodos={setTodos} />
     </div>
   );
+  console.log("App component: Processing completed: returning value");
+  return appComponentReturnVal;
 };
 
 export default App;

@@ -8,9 +8,10 @@ interface Props {
 }
 
 const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
+  console.log("InputField component: InputField component invoked");
   const inputRef = useRef<HTMLInputElement>(null);
 
-  return (
+  const inputFieldReturnVal = (
     <form
       className="input"
       onSubmit={(e) => {
@@ -31,5 +32,9 @@ const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
       </button>
     </form>
   );
+  console.log(
+    "InputField component: Processing completed InputField component returning"
+  );
+  return inputFieldReturnVal;
 };
 export default InputField;
